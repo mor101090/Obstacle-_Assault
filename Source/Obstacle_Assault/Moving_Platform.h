@@ -26,6 +26,8 @@ public:
 	UPROPERTY(EDITaNYWHERE)
 	int32 MyInt = 99;
 
+	UPROPERTY(EDITaNYWHERE)
+	int32 MyInt2 = 99;
 
 		UPROPERTY (EDITANYWHERE)
 			float MyFloat = 5.99;
