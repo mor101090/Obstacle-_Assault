@@ -16,7 +16,9 @@ void AMoving_Platform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	MyVector.Y = MyX;
+
+	SetActorLocation(MyVector);
+
 	
 }
 
