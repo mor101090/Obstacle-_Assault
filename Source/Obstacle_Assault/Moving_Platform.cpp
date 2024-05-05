@@ -39,9 +39,11 @@ SetActorLocation(CurrentLocation);
 float DistanceMoved = FVector::Dist(StartLocation, CurrentLocation);
 	// Reverse direction of motion if gone to far
 
-if	(DistanceMoved > MovedDistance)
+if	(DistanceMoved > MoveDistance)
 {
+	FVector MoveDirection = PlatformVelocity.GetSafeNormal();
+	StartLocation = StartLocation + MoveDirection * MoveDistance;
+	SetActorLocation(StartLocation);
 	PlatformVelocity = -PlatformVelocity;
-	StartLocation = CurrentLocation;
 }
 }
